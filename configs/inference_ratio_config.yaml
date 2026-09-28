@@ -1,0 +1,98 @@
+# ============================================================
+# Inference-Time Suppression Ratio Sweep
+# ============================================================
+# Configuration used to evaluate different inference-time
+# activation suppression coefficients on CoConflictQA.
+#
+# The suppression coefficient follows:
+#   lambda = 0.0 -> strongest / full suppression
+#   lambda = 1.0 -> no activation suppression
+#
+# The current evaluation scripts use command-line arguments.
+# This YAML file documents the public evaluation protocol.
+# ============================================================
+
+experiment:
+  name: inference_ratio_sweep
+  seed: 42
+
+model:
+  model_path: /path/to/model_or_adapter
+
+evaluation:
+  evaluator: evaluation/eval_coconflictqa.py
+
+  data_dir: /path/to/CoConflictQA/test
+
+  schema: base
+  use_chat_template: true
+
+generation:
+  max_new_tokens: 32
+
+  do_sample: true
+  temperature: 0.6
+  top_p: 0.9
+
+parametric_suppression:
+  inhibit_layers:
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+
+  ratios:
+    - 0.0
+    - 0.1
+    - 0.2
+    - 0.25
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    - 0.7
+    - 0.8
+    - 0.9
+    - 1.0
+
+datasets:
+  - NaturalQuestionsShort
+  - NewsQA
+  - SQuAD
+  - SearchQA
+  - TriviaQA-web
+  - hotpotq
+
+metrics:
+  - ConR
+  - MemR
+  - MR
+  - EM
+
+ratio_selection:
+  primary_metric: MR
+  direction: minimize
+
+  tie_break:
+    - metric: MemR
+      direction: minimize
+    - metric: ConR
+      direction: maximize
+    - metric: EM
+      direction: maximize
+
+output:
+  result_dir: results/inference_ratio_sweep
+
+# Best ratios selected by minimum MR on the RGDU-DKPO sweep.
+selected_ratios_rgdu:
+  NaturalQuestionsShort: 0.10
+  NewsQA: 1.00
+  SQuAD: 0.25
+  SearchQA: 0.25
+  TriviaQA-web: 0.25
+  hotpotq: 0.20

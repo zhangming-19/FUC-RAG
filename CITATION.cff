@@ -1,0 +1,25 @@
+
+
+repository-code: "https://github.com/zhangming-19/MDS-MGRE"
+url: "https://github.com/zhangming-19/MDS-MGRE"
+
+keywords:
+  - retrieval-augmented generation
+  - RAG
+  - knowledge conflict
+  - contextual faithfulness
+  - parametric knowledge
+  - LoRA
+  - Llama 3
+
+license: Apache-2.0
+
+preferred-citation:
+  type: conference-paper
+  title: "FAITHFUL UNDERCONFLICT:SELECTIVE CONFLIC CONSTRAINTS AND ADAPTIVE PARAMETRIC SUPPRESSION FOR RETRIEVAL-AUGMENTED GENERATION"
+  authors:
+    - family-names: "Li"
+      given-names: "Jiale"
+  conference:
+    name: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  year: 2027

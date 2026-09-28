@@ -1,0 +1,59 @@
+ParamMute-RGDU
+Copyright 2026 [YOUR NAME / ORGANIZATION]
+
+This distribution contains original research code as well as code derived from
+or interoperating with third-party projects.
+
+Project code
+------------
+Unless otherwise noted in individual files, original source code authored for
+this project is distributed under the Apache License 2.0 included in LICENSE.
+
+Third-party components
+----------------------
+This project builds on and/or modifies components from the following projects:
+
+1. ParamMute
+   - Upstream project: ParamMute
+   - Some training/evaluation structure and implementation may be derived from
+     or adapted from the upstream ParamMute codebase.
+   - Any upstream copyright notices and license terms applicable to those files
+     remain in effect.
+   - Before public release, preserve any license headers and attribution notices
+     present in copied or modified ParamMute files.
+
+2. Hugging Face Transformers
+   - Project: Hugging Face Transformers
+   - License: Apache License 2.0
+   - This repository may include a modified local Transformers implementation
+     for activation suppression and RGDU-related experiments.
+   - Preserve upstream copyright and license notices in modified files.
+
+3. Hugging Face PEFT
+   - Project: PEFT
+   - Used for LoRA adapter training and loading.
+   - Upstream license and attribution terms remain applicable.
+
+4. Meta Llama 3
+   - Base model: Meta-Llama-3-8B-Instruct
+   - Base-model weights are not distributed with this code repository.
+   - Model usage and derivative model artifacts are subject to the applicable
+     Meta Llama 3 license and acceptable-use terms.
+   - Model documentation should retain the statement:
+       "Built with Meta Llama 3."
+
+5. CoConflictQA
+   - Used as an evaluation benchmark.
+   - The benchmark itself is not redistributed here unless separately allowed
+     by its original license/terms.
+   - Users should obtain the benchmark from its original source.
+
+Scope of this NOTICE
+--------------------
+This NOTICE is informational and does not replace or modify any third-party
+license. If a third-party file included in this repository contains its own
+license header or NOTICE, that notice takes precedence for that file.
+
+Before publication, replace:
+  [YOUR NAME / Jiale Li]
+with the appropriate copyright holder information.
