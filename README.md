@@ -245,7 +245,7 @@ The best ratio is selected primarily by minimizing **MR**. The controlled produc
 For the SCC model, dataset-specific ratio selection improved the six-dataset macro average relative to fixed `lambda = 0`:
 
 | Setting | ConR ↑ | MemR ↓ | MR ↓ |
-|---|---:|---:|---:|---:|
+|---|---:|---:|---:|
 | Fixed `lambda = 0` | 68.9350 | 6.2605 | 8.5100 | 
 | Dataset-specific ratio | 69.8683 | 6.0643 | 8.1617 | 
 
