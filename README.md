@@ -253,10 +253,10 @@ results/official_vs_rgdu_best_mr_ratio.csv
 
 For the SCC model, dataset-specific ratio selection improved the six-dataset macro average relative to fixed `lambda = 0`:
 
-| Setting | ConR ↑ | MemR ↓ | MR ↓ | EM ↑ |
+| Setting | ConR ↑ | MemR ↓ | MR ↓ |
 |---|---:|---:|---:|---:|
-| Fixed `lambda = 0` | 68.9350 | 6.2605 | 8.5100 | 64.4950 |
-| Dataset-specific ratio | 69.8683 | 6.0643 | 8.1617 | 65.1333 |
+| Fixed `lambda = 0` | 68.9350 | 6.2605 | 8.5100 | 
+| Dataset-specific ratio | 69.8683 | 6.0643 | 8.1617 | 
 
 The released CSV files contain the corresponding per-dataset and per-ratio results.
 
