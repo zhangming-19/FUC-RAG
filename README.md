@@ -230,9 +230,8 @@ top_p            = 0.9
 inhibition layers = 19-26
 ```
 
-### 6. Select Dataset-Specific Ratios
-For the released SCC sweep, the best ratio is selected primarily by minimizing **MR**.
-The controlled produced the following dataset-specific ratios:
+### 6. Selected Dataset-Specific Ratios
+The best ratio is selected primarily by minimizing **MR**. The controlled produced the following dataset-specific ratios:
 | Dataset | Selected ratio |
 |---|---:|
 | NaturalQuestions-Short | 0.10 |
@@ -242,14 +241,6 @@ The controlled produced the following dataset-specific ratios:
 | TriviaQA-web | 0.25 |
 | HotpotQA | 0.20 |
 
-## Released Results
-The public release includes summary-level results from the inference-ratio experiments.
-```text
-results/rgdu_per_dataset_results.csv
-results/rgdu_best_by_mr.csv
-results/rgdu_macro_by_ratio.csv
-results/official_vs_rgdu_best_mr_ratio.csv
-```
 
 For the SCC model, dataset-specific ratio selection improved the six-dataset macro average relative to fixed `lambda = 0`:
 
